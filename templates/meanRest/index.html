@@ -1,0 +1,67 @@
+ {% load mezzanine_tags comment_tags keyword_tags staticfiles rating_tags i18n disqus_tags %}
+
+ <!DOCTYPE html>
+<html>
+<head>
+<title>React app#2</title>
+</head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Poppins" rel="stylesheet">
+<link href="{% static "css/eff/meanRest.css" %}" rel="stylesheet" />
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+<style>
+    .bkg{
+
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+</style>
+
+<body>
+
+
+
+<section class="container section-tours" style="background-image:url(https://dncache-mauganscorp.netdna-ssl.com/thumbseg/1135/1135161-bigthumbnail.jpg);background-repeat: no-repeat;background-size: 100% 100%;">
+
+ <script type="text/babel">
+{% include "meanRest/reactApp/reactLogic.js" %}
+{% include "meanRest/reactApp/reactTitle.js" %}
+{% include "meanRest/reactApp/reactCard.js" %}
+{% include "meanRest/reactApp/reactFoodAPI.js" %}
+
+function Wrapp(){
+    return (
+    <div>
+    <div className=" text-center  u-margin-bottom-medium">
+    <Food/>
+    <Header />
+    <BmiCalc />
+
+
+    </div>
+    </div>
+    );
+}
+
+    ReactDOM.render(<Wrapp />, document.getElementById('mydiv'))
+</script>
+
+
+<div id="mydiv"></div>
+
+
+            <div class="text-center u-margin-top-big">
+                <a href="#0" class="btn btn--blue">Discover All Tour</a>
+            </div>
+        </section>
+</body>
+
+
+</html>
