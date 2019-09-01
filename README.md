@@ -1,6 +1,6 @@
 ![Screenshot](/extra/catfitness.png?raw=true "Phil Serme, Django and React App")
 
-# meanRest
+# Django and React app
 
 In this app we are simplifying the react install process by using react CDN, like any regular javascript library. Of course, this method has good and bad.
 
