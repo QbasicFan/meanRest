@@ -23,7 +23,7 @@ Read more about the app at [Phil Serme.com](https://www.philserme.com/post/15/)
 
 1. git clone https://github.com/QbasicFan/rest
 2. add bff(default name) to settings
-3. add path to bff in url
+3. add path to rest in url
 4. python manage.py makemigrations rest
 5. python manage.py migrate rest
 
