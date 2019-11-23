@@ -44,9 +44,9 @@ str += "Name : "+myObj.hits[i].fields.item_name +"<br>Calories : " +myObj.hits[i
                 <br/>
                 <br/>
 
-                <button onClick={()=> this.searchFunction(this.state.food[0])} className="text-center u-margin-top-big btn btn--blue">{this.state.food[0]}</button>
-                <button onClick={()=> this.searchFunction(this.state.food[1])} className="text-center u-margin-top-big btn btn--blue">{this.state.food[1]}</button>
-                <button onClick={()=> this.searchFunction(this.state.food[2])} className="text-center u-margin-top-big btn btn--blue">{this.state.food[2]}</button>
+                <button onClick={()=> this.searchFunction(this.state.food[0])} className="w3-large w3-center w3-center">{this.state.food[0]}</button>
+                <button onClick={()=> this.searchFunction(this.state.food[1])} className="w3-large w3-center w3-center">{this.state.food[1]}</button>
+                <button onClick={()=> this.searchFunction(this.state.food[2])} className="w3-large w3-center w3-center">{this.state.food[2]}</button>
 
 
 
