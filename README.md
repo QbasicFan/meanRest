@@ -1,6 +1,6 @@
 ![Screenshot](/extra/catfitness.png?raw=true "Phil Serme, Django and React App")
 
-# Django and React app
+# Django Mezzanine and React app
 
 In this app we are simplifying the react install process by using react CDN, like any regular javascript library. Of course, this method has good and bad.
 
@@ -21,10 +21,10 @@ Read more about the app at [Phil Serme.com](https://www.philserme.com/post/15/)
 
 ## Install the app
 
-1. git clone https://github.com/QbasicFan/rest
-2. add bff(default name) to settings
+1. git clone https://github.com/QbasicFan/meanRest
+2. add meanRest(default name) to settings
 3. add path to rest in url
-4. python manage.py makemigrations rest
-5. python manage.py migrate rest
+4. python manage.py collectstatic
+
 
 
