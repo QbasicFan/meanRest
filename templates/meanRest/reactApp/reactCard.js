@@ -1,3 +1,6 @@
+ {% load staticfiles %}
+
+
 class Card extends React.Component {
 
 
@@ -8,7 +11,7 @@ class Card extends React.Component {
             id:1,
             outStr: "Phil",
             outFood: "cheese",
-            outImage: "https://i.ytimg.com/vi/qgcGjcoQrVI/hqdefault.jpg"
+            outImage: "http://buysellgraphic.com/images/graphic_preview/large/dark_black_background_abstract_blank_design_29272.jpg"
 
         }
 
@@ -24,22 +27,22 @@ class Card extends React.Component {
       var  imList = [
           //skinny cats
           [
-              "https://cdn.supadupa.me/shop/1807/images/1322263/skinny_cat4_large.jpg?1386037207",
-              "http://cf.girlsaskguys.com/q1732142/a145dc11-2cb7-4264-b44f-3d0e4abf5348.gif",
-              "https://image.shutterstock.com/image-photo/skinny-cat-image-260nw-1079332688.jpg",
+              "{% static "img/meanRest/fit01.jpg" %}",
+              "{% static "img/meanRest/fit02.jpg" %}",
+              "{% static "img/meanRest/fit03.jpg" %}",
           ],
 
           //average cats
           [
-              "https://i.ytimg.com/vi/UoJglAw2PM8/hqdefault.jpg",
-              "https://i.ytimg.com/vi/okUWga1mTQU/hqdefault.jpg",
-              "https://www.humanesociety.org/sites/default/files/styles/400x400/public/2018/06/cat-217679.jpg?h=c4ed616d&itok=H0FcH69a",
+              "{% static "img/meanRest/shape01.jpg" %}",
+              "{% static "img/meanRest/shape02.jpg" %}",
+              "{% static "img/meanRest/shape03.jpg" %}",
           ],
           //fat cats
           [
-              "http://i.ytimg.com/vi/6eLIMc4khe0/hqdefault.jpg",
-              "http://3.bp.blogspot.com/-Vfk02mn-6hs/TcuNsRBcDoI/AAAAAAAAAeQ/p7zmFREtHJo/s400/world+biggest+cat4.jpg",
-              "https://i.ytimg.com/vi/rjYARQtW5jg/hqdefault.jpg",
+              "{% static "img/meanRest/athletic01.jpg" %}",
+              "{% static "img/meanRest/athletic02.jpg" %}",
+              "{% static "img/meanRest/athletic03.jpg" %}",
           ],
 
           ]
@@ -61,14 +64,14 @@ class Card extends React.Component {
 
     return <div>
 
-                    <div className="card">
-                        <div className="card__side card__side--front">
-                            <div className="card__picture card__picture--1">
-                                <img src= {setPic}/>
+                    <div className="w3-card-4 w3-dark-grey">
+                        <div className="w3-container w3-center">
+                            <div className="w3-white">
+                                <img src= {setPic} />
 
                             </div>
-                            <h4 className="card__heading">
-                                <span className="card__heading-span card__heading-span--1">{this.props.type} weight</span>
+                            <h4 className="c">
+                                <span className="w3-pink">{this.props.type} weight</span>
                             </h4>
                             <div className="card__details">
                                 <ul>
@@ -88,13 +91,13 @@ class Card extends React.Component {
 
                             </div>
                         </div>
-                        <div className="card__side card__side--back card__side--back-1">
-                            <div className="card__cta">
-                                <div className="card__price-box">
-                                    <p className="card__price-only">Only</p>
-                                    <p className="card__price-value">$9,999.99/Mo</p>
+                        <div className="w3-card-4 w3-dark-grey">
+                            <div className="w3-container w3-center">
+                                <div className="w3-white">
+                                    <p className="">Only</p>
+                                    <p className="">$9,999.99/Mo</p>
                                 </div>
-                                <button className="btn btn--white">Membership Now</button>
+                                <button className="w3-btn w3-black w3-wide">Membership Now</button>
                             </div>
                         </div>
                     </div>
