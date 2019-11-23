@@ -82,57 +82,31 @@ onBMI(w,h){
     return <h1>
     Your weight is <b>{this.state.weight} kg</b>, your height is <b>{this.state.heigth} cm</b>. Your Imc is <b>{ this.state.bmi }</b>
     <hr/>
-    <div className="row">
-    <div className="col-1-of-2">
+    <div className="w3-row-padding">
+    <div className="w3-half">
     <span>Weight : </span>
-    <button onClick={this.moreWeight} className="text-center u-margin-top-big btn btn--blue">(+)</button>
-    <button onClick={this.lessWeight} className="text-center u-margin-top-big btn btn--blue">(-)</button>
+    <button onClick={this.moreWeight} className="w3-btn w3-center w3-blue">(+)</button>
+    <button onClick={this.lessWeight} className="w3-btn w3-center w3-green">(-)</button>
     </div>
-    <div className="col-1-of-2">
-    <img src= "https://i.ytimg.com/vi/sTX8qbOtPN8/hqdefault.jpg"/>
-    </div>
-    </div>
-
-    <br/>
-
-    <div className="row">
-
-    <div className="col-1-of-2">
-    <img src= "https://i.ytimg.com/vi/sTX8qbOtPN8/hqdefault.jpg"/>
-    </div>
-
-    <div className="col-1-of-2">
+    <div className="w3-half">
     <span>Heigth : </span>
-    <button onClick={this.moreHeigth} className="text-center u-margin-top-big btn btn--blue">(+)</button>
-    <button onClick={this.lessHeigth} className="text-center u-margin-top-big btn btn--blue">(-)</button>
-    </div>
-    </div>
 
-
-    <br/>
-    <div className="row">
-    <div className="col-1-of-2">
-    <span>Set Max healthy weight : </span>
-    <button onClick={() => this.setWeight(this.state.maxWeight)} className="text-center u-margin-top-big btn btn--blue">({this.state.maxWeight})</button>
-    <br/>
-    <span>Set Min healthy weight : </span>
-    <button onClick={() => this.setWeight(this.state.idealWeight)} className="text-center u-margin-top-big btn btn--blue">({this.state.idealWeight})</button>
-    <br/>
-    <span>Set Average healthy weight : </span>
-    <button onClick={() => this.setWeight(this.state.averageWeight)} className="text-center u-margin-top-big btn btn--blue">({this.state.averageWeight})</button>
-    </div>
-    <div className="col-1-of-2">
-    <img src= "https://i.ytimg.com/vi/sTX8qbOtPN8/hqdefault.jpg"/>
-    </div>
+    <button onClick={this.moreHeigth} className="w3-btn w3-center w3-blue">(+)</button>
+    <button onClick={this.lessHeigth} className="w3-btn w3-center w3-green">(-)</button>
 
     </div>
-    <br/>
-    <button onClick={() => this.onBMI(this.state.weight,this.state.heigth)}  className="text-center u-margin-top-big btn btn--blue">BMI</button>
+    </div>
     <hr/>
-<p>            {this.state.meal}</p>
+    <button onClick={() => this.onBMI(this.state.weight,this.state.heigth)}  className="w3-button w3-jumbo w3-red">BMI</button>
+    <hr/>
+
 <br/>
-    <div className="row">
-<div className="col-1-of-3">
+    <div className="w3-row-padding">
+<div className="w3-third">
+    <div className="w3-sand">
+
+    <span>Set Min healthy weight : </span>
+    <button onClick={() => this.setWeight(this.state.idealWeight)} className="w3-btn w3-center w3-green">({this.state.idealWeight})</button>
     <Card
     id = "0"
     type="lowest"
@@ -145,9 +119,15 @@ onBMI(w,h){
     submitAve = {this.state.averageWeight}
 
     />
+    </div>
 </div>
 
-<div className="col-1-of-3">
+<div className="w3-third">
+
+    <div className="w3-sand">
+
+    <span>Set Average healthy weight : </span>
+    <button onClick={() => this.setWeight(this.state.averageWeight)} className="w3-btn w3-center w3-blue">({this.state.averageWeight})</button>
     <Card
     id = "1"
     type="average"
@@ -161,9 +141,18 @@ onBMI(w,h){
     submitAve = {this.state.averageWeight}
 
     />
+
+    </div>
+
 </div>
 
-<div className="col-1-of-3">
+<div className="w3-third">
+
+    <div className="w3-sand">
+
+
+    <span>Set Max healthy weight : </span>
+    <button onClick={() => this.setWeight(this.state.maxWeight)} className="w3-btn w3-center w3-indigo">({this.state.maxWeight})</button>
     <Card
     id = "2"
     type="max"
@@ -177,6 +166,8 @@ onBMI(w,h){
     submitAve = {this.state.averageWeight}
 
     />
+
+    </div>
 </div>
     </div>
 
