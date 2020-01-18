@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class MeanrestConfig(AppConfig):
-    name = 'meanRest'
+class FoodConfig(AppConfig):
+    name = 'food'
