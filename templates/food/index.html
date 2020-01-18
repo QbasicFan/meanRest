@@ -1,0 +1,178 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src= "{% static "js/food/react.production.min.js" %}"></script>
+<script src= "{% static "js/food/react-dom.production.min.js" %}"></script>
+<script src= "{% static "js/food/babel.min.js" %}"></script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+
+.imgResp {
+width: 300px;
+height: 300px;
+}
+
+
+.rect {
+  width: 300px;
+  height: 100px;
+  background-color: green;
+  border: 1px solid black;
+}
+
+.hideMyAss {display: none;}
+
+
+
+.showIco {
+    display: none;
+    position:fixed;
+    height: 50px;
+    bottom: 50px;
+    right: 0;
+}
+
+progress {
+  background-color: #f3f3f3;
+  border: 0;
+  height: 18px;
+  border-radius: 9px;
+}
+
+</style>
+</head>
+<body style="background-color:black">
+
+
+
+<div id="main" class="w3-white" style="padding-left:15%;padding-right:15%">
+
+<!-- header -->
+<div class="w3-teal" style="background-image:url(https://dncache-mauganscorp.netdna-ssl.com/thumbseg/740/740235-bigthumbnail.jpg);background-repeat:no-repeat;background-size:100% 100%;">
+
+  <div class="w3-container">
+    <h1 class="w3-center" style="padding-top:150px;padding-bottom:150px">Get Fit - Weight Loss trackingg app</h1>
+
+
+<div class="w3-right">
+
+
+
+
+      <img src="{% static "img/food/big.jpg" %}" class="w3-bar-item w3-circle" style="width:85px">
+      <p>Hi, <b>Kimberlly</b> <button onclick="document.getElementById('convModal').style.display='block'" class="w3-button w3-black">need help?</button></p>
+
+</div>
+
+
+  </div>
+</div>
+
+<!-- show conversation modal -->
+  <div id="convModal" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('convModal').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Modal Header</h2>
+      </header>
+        <div class="w3-panel w3-leftbar">
+            <p><i class="fa fa-commenting-o" aria-hidden="true"></i><br>
+            <img src="{% static "img/food/big.jpg" %}" class="w3-bar-item w3-circle" style="width:85px">
+            <i class="w3-serif w3-xlarge">
+            Hi, I am <b>Kimberlly</b>, how can I assist you today. Ask me anything</i></p>
+
+            <p><button class="w3-button w3-black">Help</button> <button class="w3-button w3-black">About</button></p>
+
+        </div>
+    </div>
+  </div>
+
+
+<!-- bottom chat -->
+<div id="chatBtn" class="showIco">
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p class="w3-xlarge w3-serif" onclick="document.getElementById('convModal').style.display='block'">
+      <img src="{% static "img/food/big.jpg" %}" class="w3-bar-item w3-circle" style="width:40px">
+      Kimberlly Einstein. chat...</p>
+    </div>
+</div>
+
+
+<!-- draw graph-->
+
+<!-- draw react -->
+<div id="root"></div>
+
+
+<!-- footer -->
+<div class="w3-teal" style="background-image:url(http://farm5.staticflickr.com/4129/5094919668_3cd6f47c66.jpg);background-repeat:no-repeat;background-size:100% 100%;">
+  <div class="w3-container">
+    <h1 class="w3-center" style="padding-top:50px;padding-bottom:50px">Get Fit - Weight Loss trackingg app</h1>
+    <p>By <a href="www.philiserme.com">PHILSERME</a></p>
+  </div>
+</div>
+
+</div>
+
+
+
+
+<script>
+
+// track screen on scroll
+
+window.onscroll = function() {scrollTest()};
+
+
+function scrollTest(){
+
+var doc = document.getElementById("chatBtn");
+
+if (document.body.scrollTop || document.documentElement.scrollTop > 40 ){
+doc.style.display = "block";
+doc.className += " w3-animate-right ";
+}else {
+doc.style.display = "none";
+doc.className = doc.className.replace( " w3-animate-right " ," ");
+}
+
+}
+
+</script>
+
+
+
+<script type="text/babel">
+
+{% include "food/includes/secret.js" %}
+
+
+{% include "food/includes/coach.js" %}
+
+{% include "food/includes/acti.js" %}
+
+{% include "food/includes/basal.js" %}
+{% include "food/includes/reactCard.js" %}
+{% include "food/includes/controler.js" %}
+{% include "food/includes/bmi.js" %}
+{% include "food/includes/menuList.js" %}
+{% include "food/includes/calTrack.js" %}
+{% include "food/includes/card.js" %}
+{% include "food/includes/pile.js" %}
+
+ReactDOM.render(<Router />, document.getElementById('root'));
+
+</script>
+
+</body>
+</html>
